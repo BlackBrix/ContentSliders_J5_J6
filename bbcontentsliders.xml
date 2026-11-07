@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="content" method="upgrade">
+    <name>PLG_CONTENT_BBCONTENTSLIDERS</name>
+    <author>BlackBrix</author>
+    <creationDate>2026-11-07</creationDate>
+    <copyright>Copyright (C) 2026 BlackBrix</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <version>1.0.3</version>
+    <description>PLG_CONTENT_BBCONTENTSLIDERS_XML_DESCRIPTION</description>
+    <namespace path="src">BlackBrix\Plugin\Content\Bbcontentsliders</namespace>
+    <files>
+        <folder plugin="bbcontentsliders">services</folder>
+        <folder>src</folder>
+    </files>
+    <media destination="plg_content_bbcontentsliders" folder="media">
+        <folder>css</folder>
+        <folder>js</folder>
+    </media>
+    <languages>
+        <language tag="en-GB">language/en-GB/plg_content_bbcontentsliders.ini</language>
+        <language tag="en-GB">language/en-GB/plg_content_bbcontentsliders.sys.ini</language>
+        <language tag="de-DE">language/de-DE/plg_content_bbcontentsliders.ini</language>
+        <language tag="de-DE">language/de-DE/plg_content_bbcontentsliders.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic" label="PLG_CONTENT_BBCONTENTSLIDERS_FIELDSET_BASIC">
+                <field name="exclusive" type="radio" label="PLG_CONTENT_BBCONTENTSLIDERS_EXCLUSIVE" description="PLG_CONTENT_BBCONTENTSLIDERS_EXCLUSIVE_DESC" default="1" layout="joomla.form.field.radio.switcher">
+                    <option value="0">JNO</option><option value="1">JYES</option>
+                </field>
+                <field name="open_duration" type="number" label="PLG_CONTENT_BBCONTENTSLIDERS_OPEN_DURATION" description="PLG_CONTENT_BBCONTENTSLIDERS_OPEN_DURATION_DESC" default="400" min="0" max="5000" step="50" />
+                <field name="close_duration" type="number" label="PLG_CONTENT_BBCONTENTSLIDERS_CLOSE_DURATION" description="PLG_CONTENT_BBCONTENTSLIDERS_CLOSE_DURATION_DESC" default="250" min="0" max="5000" step="50" />
+                <field name="autoscroll" type="radio" label="PLG_CONTENT_BBCONTENTSLIDERS_AUTOSCROLL" default="1" layout="joomla.form.field.radio.switcher">
+                    <option value="0">JNO</option><option value="1">JYES</option>
+                </field>
+                <field name="scroll_offset" type="number" label="PLG_CONTENT_BBCONTENTSLIDERS_OFFSET" description="PLG_CONTENT_BBCONTENTSLIDERS_OFFSET_DESC" default="60" min="0" max="1000" step="1" showon="autoscroll:1" />
+                <field name="scroll_duration" type="number" label="PLG_CONTENT_BBCONTENTSLIDERS_SCROLL_DURATION" description="PLG_CONTENT_BBCONTENTSLIDERS_SCROLL_DURATION_DESC" default="500" min="0" max="5000" step="50" showon="autoscroll:1" />
+                <field name="hash_links" type="radio" label="PLG_CONTENT_BBCONTENTSLIDERS_HASH_LINKS" default="1" layout="joomla.form.field.radio.switcher">
+                    <option value="0">JNO</option><option value="1">JYES</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

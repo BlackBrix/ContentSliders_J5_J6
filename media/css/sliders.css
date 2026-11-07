@@ -1,0 +1,22 @@
+/* BlackBrix Content Sliders – isolated styles, no template/font dependencies. */
+.bbcs-item { margin: 0 0 .5rem; }
+.bbcs-heading { padding: 0; margin: 0; font-size: inherit; line-height: inherit; }
+.bbcs-toggle {
+  display: flex; align-items: center; gap: .6em; width: 100%;
+  padding: .55em .7em; border: 1px solid #d5d9de; border-radius: 3px;
+  background: #f5f6f8; color: inherit; font: inherit; font-weight: 600;
+  text-align: left; cursor: pointer; line-height: 1.5;
+}
+.bbcs-toggle:hover { background: #e9edf1; }
+.bbcs-toggle:focus-visible { outline: 2px solid #2768b3; outline-offset: 2px; }
+.bbcs-symbol {
+  display: inline-grid; place-items: center; flex: 0 0 1.05em;
+  width: 1.05em; height: 1.05em; border-radius: 2px;
+  background: #4a5260; color: #fff; font-family: Arial, sans-serif;
+  font-size: 1.05em; line-height: 1;
+}
+.bbcs-symbol::before { content: '+'; }
+.bbcs-item.bbcs-open .bbcs-symbol::before { content: '\2212'; }
+.bbcs-panel { overflow: hidden; }
+.bbcs-panel[hidden] { display: none !important; }
+.bbcs-inner { padding: .7rem .65rem 1rem; display: flow-root; }
