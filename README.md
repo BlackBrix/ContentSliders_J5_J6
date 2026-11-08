@@ -14,7 +14,7 @@ A lightweight, standalone accordion/content-slider plugin for **Joomla 5 and Joo
 - Configure exclusive mode (only one section open at a time) or allow multiple open sections.
 - Configure opening and closing durations independently (defaults: 400 ms and 250 ms; 0 = immediate).
 - Optionally scroll to an opened section with configurable offset (default: 60 px) and scrolling duration (default: 500 ms).
-- Open sections by URL fragments such as `#Altenpflege` or `#Bau-und-Holz`.
+- Open sections by URL fragments such as `#Topic-1` or `#Topic-2`.
 - Keyboard-accessible buttons, ARIA expanded state, and support for the system's reduced-motion preference.
 - No bundled third-party framework or front-end dependencies.
 - English and German Joomla language files.
@@ -32,11 +32,11 @@ A lightweight, standalone accordion/content-slider plugin for **Joomla 5 and Joo
 In a Joomla article:
 
 ```text
-{slider=Altenpflege}
+{slider=Topic 1}
 <p>Any Joomla article content, including links, images, and formatted HTML.</p>
 {/slider}
 
-{slider=Bau und Holz}
+{slider=Topic 2}
 <p>Another section.</p>
 {/slider}
 ```
@@ -44,8 +44,8 @@ In a Joomla article:
 Deep link examples:
 
 ```text
-https://example.org/companies#Altenpflege
-https://example.org/companies#Bau-und-Holz
+https://example.org/companies#Topic-1
+https://example.org/companies#Topic-2
 ```
 
 Titles with non-ASCII characters are transliterated when generating fragment IDs where supported. Duplicate titles receive unique suffixed IDs.
