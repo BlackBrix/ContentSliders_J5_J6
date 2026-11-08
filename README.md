@@ -1,6 +1,6 @@
 # BlackBrix – Content Sliders
 
-A lightweight, standalone accordion/content-slider plugin for **Joomla 5 and Joomla 6**, written in PHP and vanilla JavaScript. It preserves the familiar `{slider=Title}...{/slider}` syntax without requiring jQuery, Font Awesome, or the Joomlashack framework.
+A lightweight, standalone accordion/content-slider plugin for **Joomla 5 and Joomla 6**, written in PHP and vanilla JavaScript. It preserves the familiar `{slider=Title}...{/slider}` syntax without requiring jQuery, Font Awesome, or other 3rd-party framework.
 
 **Version:** 1.0.3  
 **Plugin group:** `content`  
@@ -14,7 +14,7 @@ A lightweight, standalone accordion/content-slider plugin for **Joomla 5 and Joo
 - Configure exclusive mode (only one section open at a time) or allow multiple open sections.
 - Configure opening and closing durations independently (defaults: 400 ms and 250 ms; 0 = immediate).
 - Optionally scroll to an opened section with configurable offset (default: 60 px) and scrolling duration (default: 500 ms).
-- Open sections by URL fragments such as `#Topic-1` or `#Topic-2`.
+- Open sections by URL fragments such as `#Altenpflege` or `#Bau-und-Holz`.
 - Keyboard-accessible buttons, ARIA expanded state, and support for the system's reduced-motion preference.
 - No bundled third-party framework or front-end dependencies.
 - English and German Joomla language files.
@@ -24,7 +24,7 @@ A lightweight, standalone accordion/content-slider plugin for **Joomla 5 and Joo
 1. Download **`plg_content_bbcontentsliders_v1.0.3.zip`** from the [GitHub Releases](../../releases) page. Do not use GitHub's auto-generated source-code ZIP as the Joomla installation package.
 2. In Joomla, choose **System → Install → Extensions** and upload the installation ZIP.
 3. Enable **Content – BlackBrix Content Sliders** in Joomla's plugin manager.
-4. If migrating from **Joomlashack Tabs and Sliders** (`jw_ts`), disable the old plugin so that two plugins do not process the same article tags.
+4. If migrating from any other **3rd-party Tabs and Sliders** (`jw_ts`), disable the old plugin so that two plugins do not process the same article tags.
 5. Clear the Joomla and browser caches if you are upgrading and older CSS/JavaScript assets remain cached.
 
 ## Usage
@@ -32,11 +32,11 @@ A lightweight, standalone accordion/content-slider plugin for **Joomla 5 and Joo
 In a Joomla article:
 
 ```text
-{slider=Topic 1}
+{slider=Altenpflege}
 <p>Any Joomla article content, including links, images, and formatted HTML.</p>
 {/slider}
 
-{slider=Topic 2}
+{slider=Bau und Holz}
 <p>Another section.</p>
 {/slider}
 ```
@@ -44,8 +44,8 @@ In a Joomla article:
 Deep link examples:
 
 ```text
-https://example.org/companies#Topic-1
-https://example.org/companies#Topic-2
+https://example.org/companies#Altenpflege
+https://example.org/companies#Bau-und-Holz
 ```
 
 Titles with non-ASCII characters are transliterated when generating fragment IDs where supported. Duplicate titles receive unique suffixed IDs.
@@ -116,5 +116,3 @@ The release installation ZIP is packaged from the plugin manifest and directorie
 ## License
 
 Copyright (C) 2026 BlackBrix. Licensed under the GNU General Public License, version 2 or (at your option) any later version (`GPL-2.0-or-later`). See [LICENSE](LICENSE).
-
-This is an independent plugin, not an official Joomlashack product. It does not bundle the Joomlashack extension or ShackFramework.
